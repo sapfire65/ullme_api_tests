@@ -9,6 +9,7 @@ class Base:
 
         email = fake.email()
         print(email)
+
 Base.generate_fake_email()
 
 
