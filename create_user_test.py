@@ -7,7 +7,6 @@ before_text = Fore
 after_text = Style.RESET_ALL
 
 
-
 api_tests = APIMethods
 
 def test_create_user():
