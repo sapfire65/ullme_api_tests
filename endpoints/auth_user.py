@@ -21,3 +21,5 @@ class AuthUser:
         print(f'\n\nrefresh_token: {self.refresh_token}')
         print(f'\naccess_token: {self.access_token}')
 
+        return self.responce.status_code
+

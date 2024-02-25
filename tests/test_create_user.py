@@ -27,17 +27,14 @@ class TestCreateUser:
         create_user.check_email(self.email)
         create_user.check_id_is_not_none()
 
-        sleep(3)
-
         activation = Data()
-        activation.activation_mail()
+        activation.check_mail_and_activation()
 
         auth_user = AuthUser()
         auth_user.auth_user(data=data)
-        self.access_token = os.getenv("ACCESS_TOKEN")
 
         delete = Delete()
-
+        self.access_token = os.getenv("ACCESS_TOKEN") # получаем токен
         delete.delete_user(
             password=self.password,
             access_token=self.access_token
